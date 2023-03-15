@@ -1,17 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Titillium+Web&display=swap');
+
+:root {
+    --light-bg:  #efefef;
+    --header-blue: #1c99ff;
+    --dark1-bg: #344a67;
+    --dark2-bg: #44535e;
+    --orange-color: #E36600;
+}
+
+*,
+*:before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Titillium Web', sans-serif;
+}
+
 body {
-    margin: 0%;
-    padding: 0%;
-    font-family: 'Arial';
-    font-size: 18px;
+    background: var(--light-bg);
+    margin: 0;
+    padding: 0;
+     
 }
 
 i {
-    font-size: 30px;
     cursor: pointer;
+    font-size: 30px;
 }
 
 header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--header-blue);
+    padding: 0em 5em;
+
+}
+
+/* .books-container {
+    height: 80vh;
+} */
+
+.over-hang {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.book-shelf {
+    display: flex;
+    flex: 1;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    margin: 2rem;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 12px;
+    font-family: 'Rock Salt', sans-serif;
+    text-align: center;
+    font-weight:bolder;
+    margin: 10px 20px;
+    height: 100%;
+}
+
+.footer-link {
+    font-family: 'Rock Salt', cursive;
+    text-decoration: none;
+    color: var(--orange-color);
+}
+ 
+.footerImg{
+    margin-top: -5px;
+    padding: 10px 0px;
     align-items: center;
 }
