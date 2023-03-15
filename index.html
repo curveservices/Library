@@ -9,23 +9,76 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <script src="main.js" defer></script>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <div class="title"><h1>Book Worm?</h1>
-                <div class="sub-title"><h3>Create Your Own Library</h3></div>
-            </div>
-            <div class="switch-container">
-                <i class="bi-brightness-high-fill" id="toggle-dark"></i>
-            </div>
-        </header>
-        <hr>
 
-        <div class="card">
-            
+<body>
+    <header>
+        <div class="title"><h2>Your Digital Library</h2></div>
+        <div class="switch-container">
+            <i class="bi-brightness-high-fill" id="toggle-dark"></i>
+        </div>  
+    </header>
+    
+    <main>
+
+        <button id="new-book"><i class="bi bi-file-plus"></i></button>
+
+        <div class="books-container">
+            <div class="overhang"></div>
+            <div class="book-shelf"></div>
         </div>
 
+    </main>
 
-    </div>
+    <!-- Modal -->
+    <section class="popup">
+        <div class="card">
+            <h2>Add a new book</h2>
+            <div class="close"><i class="bi bi-x-circle-fill"></i></div>
+            <form id="form" action="/" method="get">
+                <label for="title">Title: </label>
+                <input 
+                type="text"
+                id="title"
+                name="name"
+                placeholder="Book Title..."
+                autocomplete="off"
+                required/>
+                <br>
+                <label for="author">Author: </label>
+                <input 
+                type="text"
+                id="author"
+                name="author"
+                placeholder="Author Name..."
+                autocomplete="off"
+                required>
+                <br>
+                <label for="pages">Number of pages: </label>
+                <input 
+                type="number"
+                id="pages"
+                name="pages"
+                placeholder="e.g 353.."
+                autocomplete="off"
+                required>
+                <br>
+                <label for="read">Read the book?</label>
+                <select name="read" id="read">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                <br>
+                <input type="submit" value="submit"/>
+            </form>
+        </div>
+    </section>
+    
 </body>
+
+<footer class="footer">
+    Built by <a class="footer-link" href="https://github.com/curveservices" target="_blank">Rozla-Dev</a>
+     | 
+    <a class="footer-link" href="https://github.com/curveservices/dashboard" target="_blank" >Source </a><img class='footerImg' src="./assets/github-mark.png" height="45px">
+    
+</footer>
 </html>
