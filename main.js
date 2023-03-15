@@ -1,11 +1,15 @@
+
+// Create "NEW BOOK" button that displays a form for users to input
+// details for a book, author, title, number pages, read or not.
+
 let myLibrary = [];
 
-class book {
-    constructor(title, author, pages, status) {
+class Book {
+    constructor(title, author, pages, read) {
         this.title = title,
         this.author = author,
-        this.pages = pages;
-        this.status = status
+        this.pages = pages,
+        this.read = read
     }
 }
 
@@ -19,11 +23,11 @@ const body = document.querySelector('body');
 toggle.addEventListener('click', function() {
     this.classList.toggle('bi-moon');
     if (this.classList.toggle('bi-brightness-high-fill')) {
-        body.style.background = 'lightblue';
+        body.style.background = 'var(--light-bg)';
         body.style.color = 'black';
         body.style.transition = '1s';
     } else {
-        body.style.background = 'black';
+        body.style.background = 'var(--dark1-bg)';
         body.style.color = 'white';
         body.style.transition = '1s';
     }
@@ -31,8 +35,7 @@ toggle.addEventListener('click', function() {
 // function that loops through the array and displays each book on the page
 // Can display then in some sort of table or each on their own "card"
 
-// Add a "NEW BOOK" button that displays a form for users to input
-// details for a book, author, title, number pages, read or not.
+
 
 // use event.preventDefault(). Read event.preventDefault documentation
 
