@@ -37,7 +37,7 @@ i {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%; 
     background: var(--header-dodger-blue);
@@ -67,7 +67,7 @@ header {
     background-color: var(--header-dodger-blue);
     transition: 1.5s ease;
     position: fixed;
-    bottom: 10%;
+    bottom: 5%;
     right: 6.5%;
 }
 
