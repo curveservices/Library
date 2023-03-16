@@ -9,10 +9,6 @@ const closeButton = document.querySelector('.close');
 const bookShelf = document.querySelector('.book-shelf');
 let books = JSON.parse(localStorage.getItem('books')) || [];
 
-const author = document.querySelector('#author');
-const authorError = document.querySelector('.author-error');
-const pages = document.querySelector('#pages');
-const pagesError = document.querySelector('.pages-error');
 // function that loops through the array and displays each book on the page
 // Can display then in some sort of table or each on their own "card"
 let formOpen;
@@ -69,15 +65,16 @@ closeButton.addEventListener('click', closeModal);
 // validation
 const title = document.querySelector('#title');
 const titleError = document.querySelector('.title-error'); 
-
 title.addEventListener('input', (e) => {
-    if(title.value === '') {
-        titleError.textContent = '* Please enter a book title';
-    } else {
-        titleError.textContent = '';
-
-    }
+    title.value === '' ? titleError.textContent = '* Please enter a book title' : titleError = '';
 })
+
+const author = document.querySelector('#author');
+const authorError = document.querySelector('.author-error');
+author.addEventListener('input', (e) => {
+    author.value === '' ? authorError.textContent = '* Please enter an authors name' : authorError = '';
+})
+
 // use event.preventDefault(). Read event.preventDefault documentation
 
 // Add a button on each book’s display to remove the book from the library
