@@ -18,12 +18,14 @@
         </div>  
     </header>
     
-    <button id="new-book">+</button>
-
-    <div class="over-hang"></div>
+    <div class="add-button">
+        <button class="new-book">+</button>
+        <h2>Add Book</h2>
+    </div>
     <div class="book-shelf"></div>
+    <div class="over-lay"></div>
     
-
+    
     <!-- Modal -->
     <section class="popup">
         <div class="card">
@@ -35,7 +37,7 @@
                 <input 
                 type="text"
                 id="title"
-                name="name"
+                name="title"
                 placeholder="Book Title..."
                 autocomplete="off"
                 required/>
@@ -63,11 +65,12 @@
                 <br>
                 <label for="read">Have you read the book?</label>
                 <select name="read" id="read">
-                    <option value="Yes">Yes 😃</option>
-                    <option value="No">No 😞</option>
+                    <!-- add tag -->
+                    <option value="Yes">Yes 👍</option>
+                    <option value="No">No 👎</option>
                 </select>
                 <br><br>
-                <input type="submit" value="submit"/>
+                <input class="submit" type="submit" value="submit">
             </form>
         </div>
     </section>
