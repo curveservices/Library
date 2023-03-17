@@ -3,10 +3,11 @@
 :root {
     --light-bg:  #ffffff;
     --header-dodger-blue: #1c99ff;
-    --modal-blue: #0083ee;
+    --modal-blue: #0077d7;
     --dark1-bg: #344a67;
     --dark2-bg: #44535e;
     --orange-color: #E36600;
+    
 }
 
 *,
@@ -24,7 +25,6 @@ body {
     background: var(--light-bg); 
     margin: 0;
     padding: 0;
-     
 }
 
 i {
@@ -41,37 +41,30 @@ header {
     align-items: center;
     width: 100%; 
     background: var(--header-dodger-blue);
-    padding: 0em 3em;
+    padding: 0em 3rem;
 
 }
 
-.book-shelf {
+.add-button {
     display: flex;
-    flex: 1;
-    flex-flow: row wrap;
-    max-width: 1000;
-    position: absolute;
-    bottom: 5%;
-    left: 20%;
-    margin: 2rem;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 0rem 0rem 2rem;
 }
 
-#new-book {
+.new-book {
     border: none;
     outline: none;
     font-size: 2rem;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     cursor: pointer;
     background-color: var(--header-dodger-blue);
     transition: 1.5s ease;
-    position: fixed;
-    bottom: 5%;
-    right: 6.5%;
 }
 
-#new-book:hover {
+.new-book:hover {
     background: var(--modal-blue);
 }
 
@@ -84,8 +77,8 @@ header {
     transform: scale(0);
     transition: 0.2s ease-in-out;
     padding: 20px;
-    margin: -2em;
-    padding-bottom: 5rem;
+    margin: -11rem;
+    padding: 1rem;
     width: 21.5rem;
     border-radius: 10px;
     border: 1px solid black;
@@ -94,8 +87,6 @@ header {
     font-size: 1rem;
     font-weight: 900;
 }
-
-
 
 .head {
     display: flex;
@@ -136,7 +127,7 @@ span {
     color: red;
 }
 
-.over-hang {
+.over-lay {
     position: absolute;
     left: 0;
     top: 0;
@@ -146,6 +137,12 @@ span {
     pointer-events: none;
     opacity: 0;
     transition: 0.5s ease;
+}
+
+.book-shelf {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmx(300px, auto));
+    margin: 2rem;
 }
 
 /* footer {
