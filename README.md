@@ -1,9 +1,10 @@
-# Library T.O.P
+# Library App - The Odin Project
 
-### Live Demo :point_right: A small JS Library app 
+### Live Demo :point_right: <a href="https://curveservices.github.io/Library/">A Small JS Library App</a>
 
 ### PC View :point_down:
 
+<img width="999" alt="Screenshot 2023-03-25 at 13 13 02" src="https://user-images.githubusercontent.com/101556296/227719310-f121be57-b7c9-40c6-ae5f-048ca0a1ed39.png">
 
 
 ## Overview
