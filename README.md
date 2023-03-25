@@ -1,4 +1,4 @@
-# Library App - The Odin Project
+# Project: Library App
 
 ### Live Demo :point_right: <a href="https://curveservices.github.io/Library/">A Small JS Library App</a>
 
