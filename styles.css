@@ -10,7 +10,7 @@
     --button-red: #d03535;
     --button-green: #16c816;
     --border-radius: 10px;
-    --box-shadow: 10px 1px 12px 1px rgba(0, 0, 0, 0.5);
+    --box-shadow: 18px 12px 12px 6px rgba(0, 0, 0, 0.5);
 }
 
 *,
@@ -143,9 +143,9 @@ span {
 
 .book-shelf {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+    grid-template-columns: repeat(auto-fill, minmax(180px, auto));
     /* position: absolute; */
-    gap: 1rem;
+    gap: 2rem;
     top: 20%;
     left: 15%;
     margin: 2rem;
@@ -172,7 +172,7 @@ span {
     text-transform: uppercase;
 }
 
-.book h3{
+.book p{
     text-transform: capitalize;
 }
 
