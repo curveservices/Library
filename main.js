@@ -50,7 +50,7 @@ function displayBooks() {
         
         const toggleButton = document.createElement('button');
         toggleButton.classList.add('update');
-        toggleButton.innerHTML = 'Update <i class="bi bi-pen"></i>'
+        toggleButton.innerHTML = 'Update <i class="bi bi-pen"></i>';
         toggleButton.addEventListener('click', () => {
             book.toggleReadStatus();
             read.textContent = book.read ? 'Read 👍' : 'Not Read 👎';
