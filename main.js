@@ -110,17 +110,23 @@ newBook.addEventListener('click', formOpenOrClosed);
 closeButton.addEventListener('click', formOpenOrClosed);
 
 // form validation
-const bookTitle = document.querySelector('#title');
+const bookTitle = document.getElementById('title');
 const titleError = document.querySelector('.title-error'); 
-bookTitle.addEventListener('input', (e) => {
+bookTitle.addEventListener('input', () => {
     bookTitle.value === '' ? titleError.textContent = '* Please enter a book title' : titleError.textContent = '';
 });
 
-const bookAuthor = document.querySelector('#author');
+const bookAuthor = document.getElementById('author');
 const authorError = document.querySelector('.author-error');
-bookAuthor.addEventListener('input', (e) => {
+bookAuthor.addEventListener('input', () => {
     bookAuthor.value === '' ? authorError.textContent = '* Please enter an authors name' : authorError.textContent = '';
 });
+
+const bookPages = document.getElementById('pages');
+const pagesError = document.querySelector('.pages-error');
+bookPages.addEventListener('input', () => {
+    bookPages.value === '' ? pagesError.textContent = '* Please enter amount of pages' : pagesError.textContent= '';
+})
 
 // dark mode
 const toggle = document.getElementById('toggle-dark');
