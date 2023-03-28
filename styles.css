@@ -78,7 +78,7 @@ header {
 .card { 
     transform: scale(0);
     transition: 0.2s ease-in-out;
-    margin: -18rem;
+    margin: -15rem;
     padding: 1.2rem;
     width: 21.5rem;
     border-radius: var(--border-radius);
