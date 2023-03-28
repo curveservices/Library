@@ -209,7 +209,6 @@ button:active{
 .footer {
     position: fixed;
     bottom:0;
-    background-color: var(--header-dodger-blue);
     display: flex;
     justify-content: center;
     align-content: center;
