@@ -27,4 +27,9 @@
 
 ### NOTE: You’re not required to add any type of storage right now. You will have the option to come back to this project later on in the course.
 
-***Rozla-Dev 03-2023***
+## Languages & Tools
+
+![javascript-original](https://user-images.githubusercontent.com/101556296/229102874-1974e9f4-715e-4691-916b-fb255b729280.svg) ![html5-original-wordmark](https://user-images.githubusercontent.com/101556296/229102965-ea797207-dfc8-490e-a5f4-dfd4117fa5b6.svg) 
+![css3-original-wordmark](https://user-images.githubusercontent.com/101556296/229103021-3b7523ec-24bd-4a85-9f69-a269bd0c1494.svg)
+
+***Rozla-Dev 27-03-2023***
