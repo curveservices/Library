@@ -29,7 +29,10 @@
 
 ## Languages & Tools
 
-<img width="100" alt="Screenshot 2023-03-31 at 12 18 11" src="https://user-images.githubusercontent.com/101556296/229106704-7c22d483-6517-42c8-945a-dc34383afc08.png"> <img width="105" alt="Screenshot 2023-03-31 at 12 21 57" src="https://user-images.githubusercontent.com/101556296/229107188-cf1473fc-53e6-4558-8a58-20c2590acf30.png"> <img width="105" alt="Screenshot 2023-03-31 at 12 22 58" src="https://user-images.githubusercontent.com/101556296/229107412-23b0e3ca-2a7a-416b-8217-ab6dee69720c.png">
+<img width="100" alt="javascript" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /> <img width="100" alt="HTML5" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" /> <img width="100" alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
+
+
+
 
 
 ***Rozla-Dev 27-03-2023***
