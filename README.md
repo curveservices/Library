@@ -29,7 +29,6 @@
 
 ## Languages & Tools
 
-![javascript-original](https://user-images.githubusercontent.com/101556296/229102874-1974e9f4-715e-4691-916b-fb255b729280.svg){width=45px height=45px} ![html5-original-wordmark](https://user-images.githubusercontent.com/101556296/229102965-ea797207-dfc8-490e-a5f4-dfd4117fa5b6.svg){width=45px height=45px} 
-![css3-original-wordmark](https://user-images.githubusercontent.com/101556296/229103021-3b7523ec-24bd-4a85-9f69-a269bd0c1494.svg){width=45px height=45px}
+<img scr="file:///Users/paulrossiter/Documents/coding/used-images/javascript-original.svg" alt="javascript logo" width="45px" height="45px">
 
 ***Rozla-Dev 27-03-2023***
