@@ -1,20 +1,18 @@
 // global variables
 let myLibrary = [];
 let formOpen;
+
 const formCard = document.querySelector('.card');
-const bookForm = document.querySelector('#form');
-const newBook = document.querySelector('.new-book');
 const overLay = document.querySelector('.over-lay');
-const closeButton = document.querySelector('.close');
 const bookShelf = document.querySelector('.book-shelf');
 
 // define book class
 class Book {
     constructor(title, author, pages, read) {
         this.title = title,
-            this.author = author,
-            this.pages = pages,
-            this.read = read;
+        this.author = author,
+        this.pages = pages,
+        this.read = read;
     }
     toggleReadStatus() {
         this.read = !this.read;
@@ -22,10 +20,12 @@ class Book {
 }
 
 // define functions
-function displayBooks() {
+function addBookToLibrary(title, author,pages, read) {
+    const book = new Book(title, author, pages, read);
+    myLibrary.push(book);
     bookShelf.innerHTML = '';
 
-    for (let i = 0; i <myLibrary.length; i++) {
+    for (let i = 0; i < myLibrary.length; i++) {
         const book = myLibrary[i];
 
         const card = document.createElement('div');
@@ -69,26 +69,25 @@ function displayBooks() {
         card.dataset.index = i;
         bookShelf.appendChild(card);
     }
-}
-
-function addBookToLibrary(title, author,pages, read) {
-    const book = new Book(title, author, pages, read);
-    myLibrary.push(book);
-}
+    formOpenOrClosed();
+};
 
 // use event.preventDefault(). Read event.preventDefault documentation
-function populateBooks(e) {
-    e.preventDefault();
-    const title = e.target.title.value;
-    const author = e.target.author.value;
-    const pages = e.target.pages.value;
-    const read = e.target.read.value;
+function populateBooks(event) {
+    event.preventDefault();
+    const title = event.target.title.value;
+    const author = event.target.author.value;
+    const pages = event.target.pages.value;
+    const read = event.target.read.value;
     addBookToLibrary(title, author, pages, read);
-    formOpenOrClosed();
-    displayBooks();
 }
 
 // Create "NEW BOOK" button. Display a form, author, title, pages, read or not.
+const newBook = document.querySelector('.new-book');
+const bookForm = document.querySelector('#form');
+const closeButton = document.querySelector('.close');
+closeButton.addEventListener('click', formOpenOrClosed);
+newBook.addEventListener('click', formOpenOrClosed);
 function formOpenOrClosed() {
     if (formOpen) {
         formCard.style.transform = 'scale(0)';
@@ -106,8 +105,8 @@ function formOpenOrClosed() {
 
 // event listeners
 bookForm.addEventListener('submit', populateBooks); 
-newBook.addEventListener('click', formOpenOrClosed);
-closeButton.addEventListener('click', formOpenOrClosed);
+
+
 
 // form validation
 const bookTitle = document.getElementById('title');
@@ -142,14 +141,11 @@ toggle.addEventListener('click', function() {
         body.style.transition = '0.1s';
         formCard.style.background = 'var(--light-bg)';
         header.style.background = 'var(--header-dodger-blue)';
-        bookShelf.style.background = 'var(--light- bg)';
     } else {
         body.style.background = 'var(--dark1-bg)';
         body.style.color = 'white';
         body.style.transition = '0.1s';
         formCard.style.background = 'var(--dark2-bg)';
         header.style.background = 'var(--dark2-bg)';
-        bookCard.style.background = 'var(--dark2-bg)';
-        bookShelf.style.background = '(var--dark2-bg)';
     }
 });

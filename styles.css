@@ -16,17 +16,13 @@
 *,
 *:before,
 *::after {
-    box-sizing: inherit;
-}
-
-html {
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
 }
 
 body {
     background: var(--light-bg); 
-    margin: auto;
+    font-family: 'Titillium Web', sans-serif;
+    margin: 0;
 }
 
 i {
@@ -60,7 +56,7 @@ header {
     font-size: 2rem;
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 50px;
     cursor: pointer;
     background-color: var(--header-dodger-blue);
     transition: 1.5s ease;
@@ -80,7 +76,7 @@ header {
     transition: 0.2s ease-in-out;
     margin: -15rem;
     padding: 1.2rem;
-    width: 21.5rem;
+    width: 18.5rem;
     border-radius: var(--border-radius);
     border: 1px solid black;
     box-shadow: var(--box-shadow);
@@ -135,6 +131,7 @@ span {
     top: 0;
     right: 0;
     bottom: 0;
+    height: 100%;
     background: rgba(0, 0, 0, 0.3);
     pointer-events: none;
     opacity: 0;
@@ -146,8 +143,8 @@ span {
     grid-template-columns: repeat(auto-fill, minmax(180px, auto));
     /* position: absolute; */
     gap: 2rem;
-    top: 20%;
-    left: 15%;
+    /* top: 20%; */
+    /* left: 15%; */
     margin: 2rem;
     height: 10vh;
 }
@@ -215,7 +212,8 @@ button:active{
     gap: 12px;
     font-family: 'Rock Salt', sans-serif;
     text-align: center;
-    /* margin: 10px 20px; */
+    font-size: 12px;
+    margin: 10px 20px;
     width: 100%;
 }
 
@@ -227,6 +225,22 @@ button:active{
  
 .footerImg{
     margin-top: -5px;
-    padding: 10px 0px;
+    font-size: 12px;
     align-items: center;
+}
+
+@media only screen and (min-width:500px) {
+    .card { 
+        transform: scale(0);
+        transition: 0.2s ease-in-out;
+        margin: -15rem;
+        padding: 1.2rem;
+        width: 21.5rem;
+        border-radius: var(--border-radius);
+        border: 1px solid black;
+        box-shadow: var(--box-shadow);
+        background: var(--light-bg);
+        font-size: 1rem;
+        font-weight: 900;
+    }
 }
