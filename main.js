@@ -1,9 +1,11 @@
 // global variables
 let myLibrary = [];
 let formOpen;
-
 const formCard = document.querySelector('.card');
+const bookForm = document.querySelector('#form');
+const newBook = document.querySelector('.new-book');
 const overLay = document.querySelector('.over-lay');
+const closeButton = document.querySelector('.close');
 const bookShelf = document.querySelector('.book-shelf');
 
 // define book class
@@ -20,9 +22,7 @@ class Book {
 }
 
 // define functions
-function addBookToLibrary(title, author,pages, read) {
-    const book = new Book(title, author, pages, read);
-    myLibrary.push(book);
+function displayBooks() {
     bookShelf.innerHTML = '';
 
     for (let i = 0; i < myLibrary.length; i++) {
@@ -69,8 +69,12 @@ function addBookToLibrary(title, author,pages, read) {
         card.dataset.index = i;
         bookShelf.appendChild(card);
     }
-    formOpenOrClosed();
 };
+
+function addBookToLibrary(title, author,pages,read) {
+    const book = new Book(title, author, pages, read);
+    myLibrary.push(book);
+}
 
 // use event.preventDefault(). Read event.preventDefault documentation
 function populateBooks(event) {
@@ -80,14 +84,15 @@ function populateBooks(event) {
     const pages = event.target.pages.value;
     const read = event.target.read.value;
     addBookToLibrary(title, author, pages, read);
+    formOpenOrClosed();
+    displayBooks();
 }
 
+bookForm.addEventListener('submit', populateBooks); 
+
 // Create "NEW BOOK" button. Display a form, author, title, pages, read or not.
-const newBook = document.querySelector('.new-book');
-const bookForm = document.querySelector('#form');
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', formOpenOrClosed);
 newBook.addEventListener('click', formOpenOrClosed);
+closeButton.addEventListener('click', formOpenOrClosed);
 function formOpenOrClosed() {
     if (formOpen) {
         formCard.style.transform = 'scale(0)';
@@ -102,11 +107,6 @@ function formOpenOrClosed() {
         formOpen = true;
     }
 };
-
-// event listeners
-bookForm.addEventListener('submit', populateBooks); 
-
-
 
 // form validation
 const bookTitle = document.getElementById('title');
