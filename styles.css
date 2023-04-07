@@ -20,6 +20,7 @@
 }
 
 body {
+    display: grid;
     background: var(--light-bg); 
     font-family: 'Titillium Web', sans-serif;
     margin: 0;
@@ -203,9 +204,9 @@ button:active{
     transform: scale(0.98);
     box-shadow: inset 0px 1px 4px 1px #000000;
 }
-.footer {
-    position: fixed;
-    bottom:0;
+footer {
+    position:absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-content: center;
