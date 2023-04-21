@@ -21,6 +21,7 @@ class Book {
     }
 }
 
+
 // define functions
 function displayBooks() {
     bookShelf.innerHTML = '';
